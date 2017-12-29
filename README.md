@@ -5,7 +5,7 @@ The app works with an OAuth2 protocol for authorization.
 
 Functionality:
 1. Schedule multiple alarms that control your Emberlight socket.
-2. Set a dimming period to each alarm, allowing the light to gradually turn on.
+2. Set a dimming period for each alarm, allowing the light to gradually turn on.
 3. Set one-time and repeated alarms.
 
 Screenshots:
