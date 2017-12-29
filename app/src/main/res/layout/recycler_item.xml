@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+	<RelativeLayout
+			android:id="@+id/item_header"
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:foreground="?selectableItemBackground">
+
+		<TextView
+				android:id="@+id/header_index"
+				style="@style/TextAppearance.AppCompat.Medium"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="20sp"
+				android:padding="16dp"
+				android:layout_centerVertical="true"/>
+
+		<TextView
+				android:id="@+id/header_text"
+				style="@style/TextAppearance.AppCompat.Medium"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toEndOf="@id/header_index"
+				android:textColor="@color/colorPrimary"
+				android:textSize="40sp"
+				android:padding="10dp"/>
+
+		<ImageView
+				android:id="@+id/repeat_icon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:srcCompat="@drawable/ic_repeat"
+				android:layout_toEndOf="@id/header_text"
+				android:layout_centerVertical="true"
+				android:visibility="gone"/>
+
+		<Switch
+				android:id="@+id/expanded_switch"
+				android:switchMinWidth="80dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_alignParentEnd="true"
+				android:theme="@style/SwitchTheme"
+				android:layout_marginEnd="12dp"/>
+
+	</RelativeLayout>
+
+	<net.cachapa.expandablelayout.ExpandableLayout
+			android:id="@+id/expandable_layout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/colorPrimaryDark"
+			android:orientation="vertical"
+			app:el_duration="300"
+			app:el_expanded="false">
+
+		<include layout="@layout/expanded_content"/>
+
+	</net.cachapa.expandablelayout.ExpandableLayout>
+
+</LinearLayout>

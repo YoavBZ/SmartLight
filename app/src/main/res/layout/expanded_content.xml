@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:paddingBottom="16dp">
+
+	<TextView
+			android:id="@+id/repeat"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:text="@string/repeat"
+			android:textColor="@color/textColorPrimary"
+			android:textSize="20sp"
+			android:layout_marginStart="8dp"
+			app:layout_constraintLeft_toLeftOf="@+id/guidelineLeft"
+			app:layout_constraintTop_toTopOf="parent"
+			android:layout_marginTop="16dp"/>
+
+	<com.nex3z.togglebuttongroup.MultiSelectToggleGroup
+			android:id="@+id/group_weekdays"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			app:tbgChildSpacing="auto"
+			tools:fadingEdge="horizontal"
+			app:tbgChildSpacingForLastRow="align"
+			android:layout_marginLeft="8dp"
+			app:layout_constraintLeft_toLeftOf="@+id/guidelineLeft"
+			app:layout_constraintRight_toLeftOf="@+id/guidelineRight"
+			android:layout_marginRight="8dp"
+			app:layout_constraintHorizontal_bias="0.0"
+			android:layout_marginTop="8dp"
+			app:layout_constraintTop_toBottomOf="@+id/repeat"
+			android:layout_marginStart="8dp"
+			android:layout_marginEnd="8dp">
+
+		<com.nex3z.togglebuttongroup.button.CircularToggle
+				android:id="@+id/sun"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="S"
+				android:textSize="20sp"
+				android:textColor="@color/textColorPrimary"
+				tools:layout_editor_absoluteY="32dp"
+				tools:layout_editor_absoluteX="53dp"/>
+
+		<com.nex3z.togglebuttongroup.button.CircularToggle
+				android:id="@+id/mon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="M"
+				android:textSize="20sp"
+				android:textColor="@color/textColorPrimary"/>
+
+		<com.nex3z.togglebuttongroup.button.CircularToggle
+				android:id="@+id/tue"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="T"
+				android:textSize="20sp"
+				android:textColor="@color/textColorPrimary"/>
+
+		<com.nex3z.togglebuttongroup.button.CircularToggle
+				android:id="@+id/wed"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="W"
+				android:textSize="20sp"
+				android:textColor="@color/textColorPrimary"/>
+
+		<com.nex3z.togglebuttongroup.button.CircularToggle
+				android:id="@+id/thu"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="T"
+				android:textSize="20sp"
+				android:textColor="@color/textColorPrimary"/>
+
+		<com.nex3z.togglebuttongroup.button.CircularToggle
+				android:id="@+id/fri"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="F"
+				android:textSize="20sp"
+				android:textColor="@color/textColorPrimary"/>
+
+		<com.nex3z.togglebuttongroup.button.CircularToggle
+				android:id="@+id/sat"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="S"
+				android:textSize="20sp"
+				android:textColor="@color/textColorPrimary"/>
+
+	</com.nex3z.togglebuttongroup.MultiSelectToggleGroup>
+
+	<org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+			android:id="@+id/seekBar"
+			android:layout_width="448dp"
+			android:layout_height="wrap_content"
+			app:dsb_max="30"
+			app:dsb_value="15"
+			app:dsb_progressColor="@color/colorAccent"
+			app:dsb_indicatorTextAppearance="?android:attr/textAppearanceMedium"
+			app:dsb_trackColor="@color/colorAccent"
+			app:dsb_indicatorColor="@color/colorAccent"
+			app:dsb_indicatorElevation="16dp"
+			app:layout_constraintRight_toLeftOf="@+id/guidelineRight"
+			app:layout_constraintTop_toBottomOf="@+id/group_weekdays"
+			android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp"
+			android:layout_marginTop="16dp"
+			android:layout_marginStart="8dp"
+			android:layout_marginEnd="8dp"
+			app:layout_constraintLeft_toLeftOf="@+id/guidelineLeft"/>
+
+	<android.support.constraint.Guideline android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/guidelineRight"
+			android:orientation="vertical"
+			app:layout_constraintGuide_end="20dp"
+			tools:layout_editor_absoluteY="0dp"
+			tools:layout_editor_absoluteX="460dp"/>
+
+	<android.support.constraint.Guideline android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/guidelineLeft"
+			android:orientation="vertical"
+			app:layout_constraintGuide_begin="20dp"
+			tools:layout_editor_absoluteY="0dp"
+			tools:layout_editor_absoluteX="20dp"/>
+
+	<ImageButton
+			android:id="@+id/edit_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:srcCompat="@drawable/ic_edit_pencil"
+			app:layout_constraintRight_toLeftOf="@+id/guidelineRight"
+			android:layout_marginEnd="13dp"
+			app:layout_constraintTop_toTopOf="parent"
+			android:layout_marginTop="13dp"
+			android:tint="@color/colorAccent"
+			android:background="@color/color_transparent"/>
+
+</android.support.constraint.ConstraintLayout>

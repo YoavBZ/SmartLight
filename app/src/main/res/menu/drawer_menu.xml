@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<group
+			android:id="@+id/menu_top"
+			android:checkableBehavior="single">
+		<item
+				android:id="@+id/alarms"
+				android:icon="@drawable/ic_menu_alarm"
+				android:title="@string/alarms"/>
+
+		<item
+				android:id="@+id/emberlight"
+				android:icon="@mipmap/ic_emberlight"
+				android:title="@string/emberlight"/>
+
+		<!--<item-->
+				<!--android:id="@+id/options"-->
+				<!--android:icon="@drawable/ic_menu_manage"-->
+				<!--android:title="@string/options"/>-->
+	</group>
+
+	<group
+			android:id="@+id/menu_bottom"
+			android:checkableBehavior="none">
+		<item
+				android:id="@+id/about"
+				android:icon="@drawable/ic_menu_about"
+				android:title="@string/about"/>
+	</group>
+
+</menu>
